@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+    <variable
+        name="mainHomeViewModel"
+        type="com.example.coronatracker.ui.home.HomeViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminate="true"
+            android:elevation="10dp"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/colorPrimary"/>
+        <include
+            android:id="@+id/cardview_total_cases"
+            layout="@layout/layout_total_cases"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/cardview_total_recovered"
+            layout="@layout/layout_total_recovered"
+            android:visibility="gone"
+            />
+
+        <include
+            android:id="@+id/cardview_total_death"
+            layout="@layout/layout_total_deaths"
+            android:visibility="gone"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
