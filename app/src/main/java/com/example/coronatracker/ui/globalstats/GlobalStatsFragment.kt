@@ -77,7 +77,7 @@ class GlobalStatsFragment : Fragment() {
                 is State.Success -> {
                     binding.progressBar.hide()
                     Log.v("DATA" , state.data.toString())
-                    adapter.setCountryList(state.data.countryStats)
+                    adapter.setCountryList(state.data.countryStats.filter { countryStats -> countryStats.country.isNullOrEmpty().not() })
                 }
 
                 is State.Error -> {

@@ -14,8 +14,10 @@ class CountryListAdapter : RecyclerView.Adapter<CountryListAdapter.CountryListVi
 
     class CountryListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(country: CountryStats, position: Int) {
-            itemView.tvCountry.text = country.country + country.newCases + "new cases"
-            //itemView.txtTitle.text = articles.title
+            itemView.tvCountry.text = country.country
+            itemView.tvConfirmedCases.text = country.totalCases
+            itemView.tvRecoveredCases.text = country.totalRecovered
+            itemView.tvDeathCases.text = country.deaths
         }
     }
 

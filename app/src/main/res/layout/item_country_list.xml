@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    app:cardBackgroundColor="#999999">
+    android:theme="@style/Theme.MaterialComponents.Light">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/tvCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
             android:textSize="16sp"
             tools:text="India : 20 new cases" />
 
@@ -39,12 +41,14 @@
                     android:id="@+id/tvConfirmedCases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     tools:text="150" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Confirmed" />
+                    android:text="Confirmed"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
 
             </LinearLayout>
 
@@ -59,12 +63,14 @@
                     android:id="@+id/tvRecoveredCases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     tools:text="150" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Recovered" />
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:text="Recovered" />
 
             </LinearLayout>
 
@@ -79,14 +85,16 @@
                     android:id="@+id/tvDeathCases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     tools:text="150" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Death" />
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:text="Death" />
 
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
