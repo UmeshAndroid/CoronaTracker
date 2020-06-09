@@ -42,7 +42,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-
         binding.lifecycleOwner = this
         binding.mainHomeViewModel = homeViewModel
 
