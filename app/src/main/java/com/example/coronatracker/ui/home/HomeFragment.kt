@@ -2,7 +2,6 @@ package com.example.coronatracker.ui.home
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,7 +47,6 @@ class HomeFragment : Fragment() {
         binding.mainHomeViewModel = homeViewModel
 
         homeViewModel.getWorldStat()
-
         return binding.root
     }
 
