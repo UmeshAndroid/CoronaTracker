@@ -60,7 +60,6 @@ class HomeFragment : Fragment() {
                 is State.Loading -> {
                     binding.progressBar.show()
                 }
-
                 is State.Success -> {
                     binding.progressBar.hide()
                     bindView(state.data)
